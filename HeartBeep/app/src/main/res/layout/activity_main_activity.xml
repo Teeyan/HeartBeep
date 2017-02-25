@@ -1,0 +1,189 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context=".main_activity" android:orientation="vertical"
+    android:weightSum="5">
+
+    <!--Header Bar-->
+    <LinearLayout
+        android:contentDescription="@string/header_descript"
+        android:id="@+id/header"
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:orientation = "horizontal"
+        android:background="#00BFFF"
+        android:gravity="center"
+        android:layout_weight="1">
+
+        <Space android:layout_height="match_parent"
+                android:layout_width="wrap_content"/>
+
+
+        <TextView android:text="@string/app_name"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:textSize="30sp"
+                    android:fontFamily="serif"/>
+        
+        <ImageSwitcher
+            android:id="@+id/lock_switcher"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <!--Scrollable Item-->
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_weight="3"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <!--Set Time Interval-->
+                <TextView
+                    android:id="@+id/time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/time"
+                    android:textSize="25sp"
+                    android:layout_gravity="center"/>
+                <LinearLayout
+                    android:id="@+id/time_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/time_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/time_hint"
+                        android:inputType="numberDecimal"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:ellipsize="start"
+                        android:gravity="center_horizontal"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <!--Set Contact List-->
+                <TextView
+                    android:id="@+id/contact_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/contact"
+                    android:textSize="25sp"
+                    android:layout_gravity="center"/>
+                <ListView
+                    android:id="@+id/list"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:entries="@array/name_list"/>
+                <LinearLayout
+                    android:id="@+id/contact_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp">
+                    <EditText
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:hint="@string/name_hint"
+                        android:layout_weight="1"
+                        android:inputType="textPersonName"/>
+                    <EditText
+                        android:id="@+id/number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:hint="@string/number_hint"
+                        android:layout_weight="1"
+                        android:inputType="phone"
+                        android:digits="012345789+"/>
+                    <Button
+                        android:id="@+id/add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/add_contact"/>
+                </LinearLayout>
+             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <!--Set Reminder-->
+                <LinearLayout
+                    android:id="@+id/notification_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp">
+                    <TextView
+                        android:id="@+id/notification_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/notification"
+                        android:textSize="25sp"
+                        android:gravity="start"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_weight="1"/>
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"/>
+                </LinearLayout>
+             </LinearLayout>
+
+            <!--Set Password-->
+            <Button
+                android:id="@+id/change_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/change_passcode"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!--Content-->
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_weight = "1">
+    </LinearLayout>
+
+
+</LinearLayout>

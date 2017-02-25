@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">HeartBeep</string>
+
+    <!--Description Strings-->
+    <string name="header_descript">Header/Top Bar of the App</string>
+
+
+    <!--Content Edit Strings-->
+    <string name="time">Time Interval</string>
+    <string name="contact">Emergency Contact List</string>
+    <string name="notification">Send Reminder</string>
+    <string name="add_contact">Add</string>
+    <string name="change_passcode">Change Passcode</string>
+    <!--Hints-->
+    <string name="time_hint">Enter Number of Days</string>
+    <string name="name_hint">Name</string>
+    <string name="number_hint">Number</string>
+
+    <string-array name="name_list">
+        <item>I AM THE ONE</item>
+        <item>DONT WEIGH A TON</item>
+        <item>DONT NEED A GUN</item>
+        <item>TO GET RESPECT UP ON THE STREETS</item>
+    </string-array>
+
+</resources>

@@ -1,37 +1,36 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" tools:context=".main_activity" android:orientation="vertical"
-    android:weightSum="5">
+    android:weightSum="5" android:background="#d3d3d3">
 
     <!--Header Bar-->
     <LinearLayout
         android:contentDescription="@string/header_descript"
         android:id="@+id/header"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:orientation = "horizontal"
-        android:background="#00BFFF"
+        android:background="#69c2e5"
         android:gravity="center"
         android:layout_weight="1">
 
         <Space android:layout_height="match_parent"
-                android:layout_width="wrap_content"/>
+                android:layout_width="30dp"/>
 
-
-        <TextView android:text="@string/app_name"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:layout_height="match_parent"
-                    android:layout_width="0dp"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:textSize="30sp"
-                    android:fontFamily="serif"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:src="@drawable/logo"/>
         
-        <ImageSwitcher
+        <ImageButton
             android:id="@+id/lock_switcher"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/lock"
+            android:background="#69c2e5"/>
     </LinearLayout>
 
     <!--Scrollable Item-->
@@ -76,7 +75,8 @@
                         android:layout_marginRight="10dp"
                         android:layout_marginTop="5dp"
                         android:ellipsize="start"
-                        android:gravity="center_horizontal"/>
+                        android:gravity="center_horizontal"
+                        android:background="#ffffff"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -91,7 +91,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/contact"
-                    android:textSize="25sp"
+                    android:textSize="20sp"
                     android:layout_gravity="center"/>
                 <ListView
                     android:id="@+id/list"
@@ -100,7 +100,10 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:layout_marginTop="20dp"
-                    android:entries="@array/name_list"/>
+                    android:entries="@array/name_list"
+                    android:background="#ffffff"
+                    android:divider="#000000"
+                    android:dividerHeight="1dp"/>
                 <LinearLayout
                     android:id="@+id/contact_layout"
                     android:layout_width="match_parent"
@@ -111,24 +114,31 @@
                     android:layout_marginTop="10dp">
                     <EditText
                         android:id="@+id/name"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:hint="@string/name_hint"
                         android:layout_weight="1"
-                        android:inputType="textPersonName"/>
+                        android:inputType="textPersonName"
+                        android:background="#ffffff"
+                        android:paddingLeft="3dp"/>
+                    <Space android:layout_width="5dp" android:layout_height="match_parent"/>
                     <EditText
                         android:id="@+id/number"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:hint="@string/number_hint"
                         android:layout_weight="1"
                         android:inputType="phone"
-                        android:digits="012345789+"/>
+                        android:digits="012345789+"
+                        android:background="#ffffff"
+                        android:paddingLeft="3dp"/>
+                    <Space android:layout_width="5dp" android:layout_height="match_parent"/>
                     <Button
                         android:id="@+id/add"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="@string/add_contact"/>
+                        android:text="@string/add_contact"
+                        android:background="#69c2e5"/>
                 </LinearLayout>
              </LinearLayout>
 
@@ -157,6 +167,7 @@
                         android:layout_marginTop="3dp"
                         android:layout_weight="1"/>
                     <Switch
+                        android:id="@+id/reminder_switch"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:checked="true"/>
@@ -170,7 +181,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:text="@string/change_passcode"/>
+                android:text="@string/change_passcode"
+                android:background="#69c2e5"/>
         </LinearLayout>
 
     </ScrollView>
@@ -182,7 +194,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
-        android:layout_weight = "1">
+        android:layout_weight="1">
     </LinearLayout>
 
 

@@ -216,7 +216,7 @@
                 android:background="#69c2e5">
             </Button>
             <Button
-                android:id="@+id/buttonDeleteBack"
+                android:id="@+id/buttonDelete"
                 android:layout_width="0dip"
                 android:layout_weight="1"
                 android:layout_height="match_parent"

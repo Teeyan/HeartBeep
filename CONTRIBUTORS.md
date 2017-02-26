@@ -1,11 +1,11 @@
 #Anthony Kim
-**Resources** - Created Logo, Splash Icon, and various other graphics.
+**Resources** - Created Logo, Splash Icon, and various other graphics. Inspiration behind project.
 
 #Daniel Tian
 **Front-End / Back-End** - Wrote Java and XML files. Integrated Android Volley to make HTTP POST Requests to server.
                            Handled bulk of Application Development.
 
-#Ruoqi HU
+#Ruoqi Hu
 **Server Side** - Set up secure tunneling of local host ports with use of Node.js, ngrok, and Twilio. Worked with JSON, Javascript,
                   and AJAX to retrieve information from the application and put out messages through Twilio.
 

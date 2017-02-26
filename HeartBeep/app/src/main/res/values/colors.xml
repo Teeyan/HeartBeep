@@ -6,9 +6,4 @@
     <color name="blue">#69c2e5</color>
     <color name="transparent">#000000</color>
 
-    <selector xmlns:android="http://schemas.android.com/apk/res/android" id="button_select">
-        <item android:drawable="@color/transparent" android:state_pressed="true"/>
-        <item android:drawable="@color/blue"/>
-    </selector>
-
 </resources>

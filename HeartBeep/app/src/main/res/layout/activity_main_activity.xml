@@ -13,24 +13,11 @@
         android:background="@color/blue"
         android:gravity="center"
         android:layout_weight="1">
-
-        <Space android:layout_height="match_parent"
-                android:layout_width="30dp"/>
-
         <ImageView
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_gravity="center"
             android:src="@drawable/logo"/>
-        
-        <ImageButton
-            android:id="@+id/lock_switcher"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginRight="10dp"
-            android:src="@drawable/lock"
-            android:background="@color/blue"/>
     </LinearLayout>
 
     <!--Scrollable Item-->
@@ -100,7 +87,6 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:layout_marginTop="20dp"
-                    android:entries="@array/name_list"
                     android:background="#ffffff"
                     android:divider="#000000"
                     android:dividerHeight="1dp"/>
@@ -129,7 +115,7 @@
                         android:hint="@string/number_hint"
                         android:layout_weight="1"
                         android:inputType="phone"
-                        android:digits="012345789+"
+                        android:digits="0123456789"
                         android:background="#ffffff"
                         android:paddingLeft="3dp"/>
                     <Space android:layout_width="5dp" android:layout_height="match_parent"/>
@@ -138,7 +124,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:text="@string/add_contact"
-                        android:background="@color/button_select"/>
+                        android:background="@drawable/selector"/>
                 </LinearLayout>
              </LinearLayout>
 
@@ -173,16 +159,6 @@
                         android:checked="true"/>
                 </LinearLayout>
              </LinearLayout>
-
-            <!--Set Password-->
-            <Button
-                android:id="@+id/change_pass"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:text="@string/change_passcode"
-                android:background="@color/button_select"/>
         </LinearLayout>
 
     </ScrollView>

@@ -12,34 +12,8 @@
     <string name="add_contact">Add</string>
     <string name="change_passcode">Change Passcode</string>
     <!--Hints-->
-    <string name="time_hint">Enter Number of Days</string>
+    <string name="time_hint">Enter Number of Days - Initially 3</string>
     <string name="name_hint">Name</string>
     <string name="number_hint">Number</string>
-
-    <string-array name="name_list">
-        <item>I AM THE ONE</item>
-        <item>DONT WEIGH A TON</item>
-        <item>DONT NEED A GUN</item>
-        <item>TO GET RESPECT UP ON THE STREETS</item>
-    </string-array>
-
-
-    <!--STRINGS FOR THE NUMPAD-->
-    <string name="one">1</string>
-    <string name="two">2</string>
-    <string name="three">3</string>
-    <string name="four">4</string>
-    <string name="five">5</string>
-    <string name="six">6</string>
-    <string name="seven">7</string>
-    <string name="eight">8</string>
-    <string name="nine">9</string>
-    <string name="exit">Exit</string>
-    <string name="delete">Delete</string>
-
-    <!--PassCode Strings-->
-    <string name="enter">Enter Passcode</string>
-    <string name="enter_new">Enter New Passcode</string>
-    <string name="confirm">Confirm New Passcode</string>
 
 </resources>
